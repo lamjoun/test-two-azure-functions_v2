@@ -1,0 +1,4 @@
+pandas
+numpy
+azure-functions
+azure-storage-blob
