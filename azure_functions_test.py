@@ -8,6 +8,8 @@ import json
 import io
 
 
+app = func.FunctionApp()
+
 # Fonction 1 : Calculer le max
 @app.function_name(name="max_function")
 @app.route(route="max_function", methods=["POST"])  # Binding HTTP avec méthode POST ou GET
