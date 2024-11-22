@@ -3,6 +3,8 @@ import logging
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
+
+@app.function_name("pythonfunction")
 @app.route(route="pythonfunction")
 def pythonfunction(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Pythonfunction HTTP trigger function processed a request.')
@@ -19,13 +21,13 @@ def pythonfunction(req: func.HttpRequest) -> func.HttpResponse:
         return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
     else:
         return func.HttpResponse(
-            "This HTTP triggered function executed successfully. "
-            "Pass a name in the query string or in the request body for a personalized response.",
+            "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
             status_code=200
         )
 
 
-@app.route(route="anotherfunction")
+@app.function_name("anotherfunction")
+@app.function_name("anotherfunction")  # Added the decorator here
 def anotherfunction(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Anotherfunction HTTP trigger function processed a request.')
 
