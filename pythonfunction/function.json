@@ -1,0 +1,19 @@
+{
+  "scriptFile": "../testrl24appv2.py",  # Point vers le fichier Python
+  "bindings": [
+    {
+      "authLevel": "anonymous", 
+      "type": "httpTrigger",    
+      "direction": "in",       
+      "name": "req",            
+      "route": "pythonfunction" 
+    },
+    {
+      "type": "http", 
+      "methods": ["get", "post"],
+      "direction": "out",
+      "name": "$return"
+    }
+  ]
+}
+
