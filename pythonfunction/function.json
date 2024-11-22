@@ -1,5 +1,5 @@
 {
-  "scriptFile": "../testrl24appv2.py",  # Point vers le fichier Python
+  "scriptFile": "../testrl24appv2.py",
   "bindings": [
     {
       "authLevel": "anonymous", 
