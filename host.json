@@ -1,5 +1,9 @@
 {
     "version": "2.0",
+    "functions": [
+     "pythonfunction",
+     "anotherfunction"
+    ],
     "logging": {
       "applicationInsights": {
         "samplingSettings": {
