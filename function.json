@@ -1,15 +1,15 @@
 {
-  "scriptFile": "testrl24appv2.py",  // Point vers le fichier Python
+  "scriptFile": "testrl24appv2.py",  # Point vers le fichier Python
   "bindings": [
     {
-      "authLevel": "anonymous",  // Définir le niveau d'accès (function, anonymous, etc.)
-      "type": "httpTrigger",    // Déclencheur HTTP
+      "authLevel": "anonymous",  #// Définir le niveau d'accès (function, anonymous, etc.)
+      "type": "httpTrigger",    #// Déclencheur HTTP
       "direction": "in",       
-      "name": "req",            // Nom du paramètre dans la fonction
-      "route": "pythonfunction" // Route pour accéder à la fonction
+      "name": "req",            #// Nom du paramètre dans la fonction
+      "route": "pythonfunction" #// Route pour accéder à la fonction
     },
     {
-      "type": "http",           // Définition de la réponse HTTP
+      "type": "http",           #// Définition de la réponse HTTP
       "methods": ["get", "post"],
       "direction": "out",
       "name": "$return"
