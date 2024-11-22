@@ -7,7 +7,7 @@ app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 @app.function_name("pythonfunction")
 @app.route(route="pythonfunction")
 def pythonfunction(req: func.HttpRequest) -> func.HttpResponse:
-    logging.info('Pythonfunction HTTP trigger function processed a request.')
+    logging.info('======Pythonfunction HTTP trigger function processed a request.')
 
     name = req.params.get('name')
     if not name:
