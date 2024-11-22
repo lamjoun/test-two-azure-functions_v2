@@ -1,5 +1,5 @@
 {
-  "scriptFile": "../testrl24appv2.py",
+  "scriptFile": "__init__.py",
   "bindings": [
     {
       "authLevel": "anonymous", 
