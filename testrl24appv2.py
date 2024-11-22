@@ -5,7 +5,7 @@ app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
 
 @app.function_name("pythonfunction")
-@app.route(route="pythonfunction")
+@app.route(route="pythonfunction", methods=["POST"])
 def pythonfunction(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('======Pythonfunction HTTP trigger function processed a request.')
 
@@ -27,7 +27,7 @@ def pythonfunction(req: func.HttpRequest) -> func.HttpResponse:
 
 
 @app.function_name("anotherfunction")
-@app.function_name("anotherfunction")  # Added the decorator here
+@app.route(route="anotherfunction", methods=["POST"])  # Added the decorator here
 def anotherfunction(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Anotherfunction HTTP trigger function processed a request.')
 
