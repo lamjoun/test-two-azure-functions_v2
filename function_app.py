@@ -1,7 +1,7 @@
 from azure.storage.blob import BlobServiceClient
 import azure.functions as func
 import logging
-#from io import StringIO
+from io import StringIO
 import pandas as pd
 import numpy as np
 import json
@@ -41,7 +41,7 @@ def max_function_def(req: func.HttpRequest) -> func.HttpResponse:
     try:
         # import
         #from azure.storage.blob import BlobServiceClient
-        from io import StringIO
+        #from io import StringIO
         #import pandas as pd
         #import json
         #import os
