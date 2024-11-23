@@ -3,6 +3,7 @@ import azure.functions as func
 import logging
 #from io import StringIO
 import pandas as pd
+import numpy as np
 import json
 #import os
 import io
@@ -157,7 +158,7 @@ def test_function_d(req: func.HttpRequest) -> func.HttpResponse:
     
     try:
         # test 
-        import numpy as np  # Importer NumPy
+        #import numpy as np  # Importer NumPy
         
         # Récupération des données de la requête
 
