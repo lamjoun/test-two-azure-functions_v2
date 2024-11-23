@@ -5,7 +5,7 @@ import logging
 import pandas as pd
 import numpy as np
 import json
-#import os
+import os
 import io
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
@@ -44,7 +44,7 @@ def max_function_def(req: func.HttpRequest) -> func.HttpResponse:
         from io import StringIO
         #import pandas as pd
         #import json
-        import os
+        #import os
         #
         # Vérifiez si les données JSON sont bien reçues
         req_body = req.get_json()
