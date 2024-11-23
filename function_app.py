@@ -1,11 +1,11 @@
 import azure.functions as func
 import logging
 
-app = func.FunctionApp()
+app = func.FunctionApp(http_auth_level=func.AuthLevel.FUCTION)
 
 
 @app.function_name("pythonfunction")
-@app.route(route="pythonfunction", methods=["POST"])
+@app.route(route="pythonfunction", methods=["POST"],auth_level=func.AuthLevel.FUCTION)
 def pythonfunction(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('======Pythonfunction HTTP trigger function processed a request.')
 
@@ -27,7 +27,7 @@ def pythonfunction(req: func.HttpRequest) -> func.HttpResponse:
 
 
 @app.function_name("anotherfunction")
-@app.route(route="anotherfunction", methods=["POST"])  # Added the decorator here
+@app.route(route="anotherfunction", methods=["POST"],auth_level=func.AuthLevel.FUCTION)  # Added the decorator here
 def anotherfunction(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Anotherfunction HTTP trigger function processed a request.')
 
