@@ -96,3 +96,14 @@ def anotherfunction(req: func.HttpRequest) -> func.HttpResponse:
         "This is another HTTP triggered function.",
         status_code=200
     )
+
+# anotherfunction
+@app.function_name("anotherfunction2")
+@app.route(route="anotherfunction2", methods=["POST"],auth_level=func.AuthLevel.ANONYMOUS)  # Added the decorator here
+def anotherfunction2(req: func.HttpRequest) -> func.HttpResponse:
+    logging.info('Anotherfunction2222 HTTP trigger function processed a request.')
+
+    return func.HttpResponse(
+        "This is another HTTP triggered function.22222",
+        status_code=200
+    )
