@@ -31,7 +31,7 @@ def pythonfunction_def(req: func.HttpRequest) -> func.HttpResponse:
         )
 
 # Fonction 1 : Calculer le max
-@app.function_name(name="max_function")
+@app.function_name("max_function")
 @app.route(route="max_function", methods=["POST"],auth_level=func.AuthLevel.ANONYMOUS)  # Binding HTTP avec méthode POST 
 def max_function_def(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("Execution de la fonction Azure: max_function...")
